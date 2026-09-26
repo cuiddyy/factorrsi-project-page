@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FACTORRSI: LLM-GUIDED TEMPORAL FACTOR MINING THROUGH RECURSIVE SELF-IMPROVEMENT</title>
+  <meta name="description" content="FactorRSI: LLM-guided temporal factor mining through recursive self-improvement, with an interactive explorer of recorded factor ancestry.">
+  <meta name="theme-color" content="#13243e">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20260911-3">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner"><a class="wordmark" href="#"><span class="brand-symbol" aria-hidden="true">F</span> FactorRSI</a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#lineage">Factor lineage</a><a href="#results">Results</a><a href="#resources">Resources</a></nav></div></header>
+<main id="main">
+  <section class="hero container">
+    <p class="eyebrow">Interpretable temporal learning · LLM-guided evolution</p>
+    <h1>FACTORRSI: LLM-GUIDED <span>TEMPORAL FACTOR MINING</span> THROUGH RECURSIVE SELF-IMPROVEMENT</h1>
+    <p class="hero-summary">From readable hypotheses to specialized predictors.<br>From individual factors to an evolving population.</p>
+    <div class="hero-actions"><a class="button primary" href="#lineage">Explore factor evolution <span aria-hidden="true">↗</span></a><a class="button" href="#results">View reported results <span aria-hidden="true">↗</span></a></div>
+    <p class="manuscript-note">Research project page · September 2026</p>
+    <div class="factor-equation" aria-label="A temporal factor combines a condition, an encoder, and a temporal input plan"><span class="equation-label">One factor</span><span><b>Condition</b><small>Where it applies</small></span><i aria-hidden="true">+</i><span><b>Encoder</b><small>How it predicts</small></span><i aria-hidden="true">+</i><span><b>Temporal plan</b><small>Which history it sees</small></span><i aria-hidden="true">=</i><span class="factor-result"><b>Specialized predictor</b><small>An inspectable data–model program</small></span></div>
+  </section>
+  <section class="overview container section" id="overview">
+    <div class="section-heading"><p class="eyebrow">01 / The idea</p><h2>A population that learns<br>how to specialize.</h2></div>
+    <div class="overview-copy"><p>Different histories can give the same observation different predictive meanings. A single temporal model must fit all of these mechanisms at once. FactorRSI instead evolves a population of factors, each pairing an executable condition with its own prediction model.</p><p>An LLM proposes new hypotheses, refines existing factors, and combines parent mechanisms. Sequential factors also carry a temporal input plan. A bounded recursive self-improvement (RSI) controller adapts the search policy using validation evidence.</p><p>The population retains its ancestry. Each factor can be traced to the hypotheses and operations that produced it.</p></div>
+  </section>
+  <section class="method-section"><div class="container"><p class="eyebrow">How the population evolves</p><div class="method-flow">
+    <article><span class="method-index exploration">01</span><h3>Explore</h3><p>Propose a new conditional mechanism and train a specialized encoder.</p><span class="method-foot">New hypothesis · no parent</span></article>
+    <article><span class="method-index mutation">02</span><h3>Mutate</h3><p>Refine a parent's condition, change its encoder, or adjust its temporal plan.</p><span class="method-foot">One recorded parent</span></article>
+    <article><span class="method-index crossover">03</span><h3>Recombine</h3><p>Combine mechanisms from two parents into a new candidate factor.</p><span class="method-foot">Two recorded parents</span></article>
+    <article><span class="method-index policy">↻</span><h3>Reflect</h3><p>Use validation evidence to adjust bounded search choices, then accept or roll back the policy.</p><span class="method-foot">RSI policy adaptation</span></article>
+  </div><p class="method-caption">Candidates are trained and evaluated before entering the population. The RSI controller changes the search policy while keeping labels, temporal cutoffs, and evaluation rules fixed.</p></div></section>
+  <section class="container section lineage-section" id="lineage">
+    <div class="section-topline"><div><p class="eyebrow">02 / Inside the evolution</p><h2>Every factor has a history.</h2></div><p class="section-aside">Play the search forward.<br>Select a factor to follow its ancestry.</p></div>
+    <p class="lineage-intro">Recorded parent–child relationships from three financial datasets. Each point is a trained factor; each link is a recorded inheritance relationship.</p>
+    <div id="lineage-explorer" class="explorer"><p class="data-status" role="status">Loading recorded factor ancestry…</p></div>
+    <p class="figure-caption">The explorer shows factors generated through round 250. It is a historical snapshot, not a live training monitor. Links come from recorded parent identifiers; geometric proximity does not imply inheritance.</p>
+  </section>
+  <section class="results-section" id="results"><div class="container section">
+    <div class="section-topline"><div><p class="eyebrow">03 / Empirical observations</p><h2>Adaptive search across five tasks.</h2></div><p class="section-aside">RSI on vs. off<br>Reported endpoint results</p></div>
+    <p class="results-intro">RSI-on improves the reported Qwen3.5-397B-A17B-FP8 results on most dataset–metric comparisons while using a search policy that adapts to validation feedback.</p>
+    <div class="table-scroll"><table><caption>Reported TEST performance extrema with Qwen3.5-397B-A17B-FP8, rounded as in the manuscript. Lower WRMSSE and higher IC, ICIR, and RankIC are better.</caption><thead><tr><th scope="col">Dataset</th><th scope="col">Search policy</th><th scope="col">WRMSSE ↓</th><th scope="col">IC ↑</th><th scope="col">ICIR ↑</th><th scope="col">RankIC ↑</th></tr></thead><tbody>
+      <tr><th scope="row" rowspan="2">CSI300<span class="dataset-note">Daily equities</span></th><td>RSI off</td><td>—</td><td>0.044</td><td>0.281</td><td>0.035</td></tr><tr class="rsi-row"><td>RSI on</td><td>—</td><td class="best">0.045</td><td class="best">0.302</td><td class="best">0.036</td></tr>
+      <tr><th scope="row" rowspan="2">CSI500<span class="dataset-note">Daily equities</span></th><td>RSI off</td><td>—</td><td>0.030</td><td>0.267</td><td>0.030</td></tr><tr class="rsi-row"><td>RSI on</td><td>—</td><td class="best">0.031</td><td class="best">0.269</td><td class="best">0.032</td></tr>
+      <tr><th scope="row" rowspan="2">Numerai<span class="dataset-note">Weekly signal eras</span></th><td>RSI off</td><td>—</td><td>0.053</td><td>2.961</td><td>0.045</td></tr><tr class="rsi-row"><td>RSI on</td><td>—</td><td>0.053</td><td class="best">2.988</td><td class="best">0.046</td></tr>
+      <tr><th scope="row" rowspan="2">M5<span class="dataset-note">Retail demand</span></th><td>RSI off</td><td>1.661</td><td>0.374</td><td>0.526</td><td>0.590</td></tr><tr class="rsi-row"><td>RSI on</td><td class="best">1.658</td><td class="best">0.376</td><td class="best">0.536</td><td class="best">0.600</td></tr>
+      <tr><th scope="row" rowspan="2">PEMS-BAY<span class="dataset-note">Traffic speed</span></th><td>RSI off</td><td>—</td><td>0.728</td><td>6.222</td><td>0.740</td></tr><tr class="rsi-row"><td>RSI on</td><td>—</td><td class="best">0.731</td><td class="best">6.347</td><td class="best">0.746</td></tr>
+    </tbody></table></div>
+    <div class="protocol-note"><h3>Reading these results</h3><p>The values are descriptive extrema from the reported runs, not equal-round or seed-averaged comparisons. The manuscript gives the chronological split, metric definitions, endpoint resources, and further results for three LLM backbones.</p><p>The interactive lineage above is a separate historical snapshot for three financial datasets through round 250. It is not the source of this five-dataset endpoint table.</p></div>
+  </div></section>
+  <section class="container section resources" id="resources"><div><p class="eyebrow">04 / Research resources</p><h2>Explore the work.</h2><p>The manuscript provides the full method, evaluation protocol, and limitations. This page offers an interactive view of recorded factor ancestry and a concise result summary.</p></div><div class="resource-links"><a href="lineage.json" download><span><b>Factor lineage data</b><small>Three datasets · recorded relationships through round 250</small></span><span aria-hidden="true">↓</span></a><a id="source-link" href="README.md"><span><b>Page data &amp; provenance</b><small>Snapshot definitions and interpretation notes</small></span><span aria-hidden="true">↗</span></a></div></section>
+</main>
+<footer class="container"><a class="wordmark" href="#">FactorRSI</a><p>Interpretable factors. Traceable evolution.</p><a href="#main">Back to top ↑</a></footer>
+<script type="module">
+import('./explorer.js?v=20260911-3').catch(() => {
+  const message = document.querySelector('#lineage-explorer');
+  message.textContent = 'The interactive graph could not start. Open the HTTP preview and reload this page.';
+  message.classList.add('data-status');
+});
+</script>
+</body>
+</html>
